@@ -10,7 +10,7 @@ dotenv.config()
 const app = express()
 
 // Middleware
-const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173').split(',').map(origin => origin.trim())
+const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,https://carbstrackerfrontend.vercel.app').split(',').map(origin => origin.trim())
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || corsOrigins.includes(origin)) {
