@@ -1,0 +1,39 @@
+.card {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.text-neon {
+  color: #0ea5e9 !important;
+  font-weight: 600;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+  background: linear-gradient(90deg, #0ea5e9 0%, #06b6d4 100%);
+}
+
+.bg-dark-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+  border-left: 4px solid #0ea5e9;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid #10b981;
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid #ef4444;
+}
+
+.list-group-item {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: none;
+}
+
+.badge {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+  color: white;
+}

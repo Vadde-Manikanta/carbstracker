@@ -1,0 +1,32 @@
+.card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.text-neon {
+  color: #0ea5e9 !important;
+  font-weight: 600;
+}
+
+.list-unstyled li {
+  margin-bottom: 0.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.badge {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.bg-dark-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #0ea5e9;
+}
+
+.progress {
+  background-color: #e0f2fe;
+}

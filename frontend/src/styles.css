@@ -1,0 +1,33 @@
+:root {
+  color-scheme: dark;
+  background-color: #090b13;
+  color: #e9ecef;
+}
+body {
+  background: radial-gradient(circle at top, #1a1f34 0%, #090b13 60%);
+  color: #f8f9fa;
+}
+.card {
+  background: rgba(18, 24, 43, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar, .btn-primary {
+  background: #0f172a !important;
+}
+.form-control, .form-select {
+  background: #111827;
+  color: #f8f9fa;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25);
+}
+.progress {
+  height: 1.15rem;
+}
+.navbar-brand, .nav-link, .btn-link {
+  color: #f8f9fa !important;
+}
+.bg-dark-card { background: rgba(13, 20, 41, 0.96); }
+.text-neon { color: #7dd3fc; }
+.small-text { font-size: 0.9rem; opacity: 0.85; }

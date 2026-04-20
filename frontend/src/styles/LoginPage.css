@@ -1,0 +1,35 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.nav-link {
+  color: #f0f9ff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #0ea5e9 !important;
+}
+
+.alert {
+  border-radius: 0.8rem;
+  border-left: 4px solid currentColor;
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+  color: #991b1b;
+}
+
+.form-control,
+.form-select {
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.15);
+}

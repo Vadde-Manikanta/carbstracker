@@ -1,0 +1,30 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.form-label {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.form-control,
+.form-select {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: white;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.15);
+  color: #0f172a;
+}
+
+.alert {
+  border-radius: 0.8rem;
+  border-left: 4px solid currentColor;
+}
