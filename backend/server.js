@@ -10,17 +10,26 @@ dotenv.config()
 const app = express()
 
 // Middleware
-const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,https://carbstrackerfrontend.vercel.app').split(',').map(origin => origin.trim())
+const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,https://carbstrackerfrontend.vercel.app')
+  .split(',')
+  .map(origin => origin.trim())
+  .filter(Boolean)
+
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || corsOrigins.includes(origin)) {
+      console.log(`CORS allowed origin: ${origin || 'local request'}`)
       callback(null, true)
     } else {
+      console.warn(`CORS blocked origin: ${origin}`)
       callback(new Error(`CORS policy: origin ${origin} not allowed`), false)
     }
   },
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
+app.options('*', cors({ origin: corsOrigins, credentials: true }))
 app.use(express.json())
 
 // Request logging

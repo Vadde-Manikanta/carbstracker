@@ -6,7 +6,7 @@ const request = async (path, options = {}) => {
   if (token) headers.Authorization = `Bearer ${token}`
 
   const trimmedApiUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl
-  const response = await fetch(`${trimmedApiUrl}${path}`, { ...options, headers })
+  const response = await fetch(`${trimmedApiUrl}${path}`, { ...options, headers, mode: 'cors' })
   const data = await response.json()
   if (!response.ok) throw new Error(data.message || 'API Error')
   return data
