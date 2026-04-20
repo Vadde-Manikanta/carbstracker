@@ -1,11 +1,12 @@
-const apiUrl = import.meta.env.VITE_API_URL || '/api'
+const apiUrl = import.meta.env.VITE_API_URL || 'https://carbstracker.onrender.com/api'
 
 const request = async (path, options = {}) => {
   const token = localStorage.getItem('carbs_token')
   const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) }
   if (token) headers.Authorization = `Bearer ${token}`
 
-  const response = await fetch(`${apiUrl}${path}`, { ...options, headers })
+  const trimmedApiUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl
+  const response = await fetch(`${trimmedApiUrl}${path}`, { ...options, headers })
   const data = await response.json()
   if (!response.ok) throw new Error(data.message || 'API Error')
   return data
